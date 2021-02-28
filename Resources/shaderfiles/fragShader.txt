@@ -1,0 +1,14 @@
+#version 440 core
+out vec4 fragmentColor;
+
+in vec4 vertexColor;
+in vec2 vertexTexture;
+
+uniform sampler2D texture1;
+uniform sampler2D texture2;
+uniform vec2 uvScale;
+
+void main()
+{
+fragmentColor = texture(texture1, vertexTexture) * vec4(vertexColor);
+}
